@@ -2,7 +2,7 @@
   Name:         sweepRPM.ino
   Created:      01-21-2026
   Author:       Charles French
-  Description:  sweep the RPM range in which the motor can operate
+  Description:  sweep the RPM range in which the DC motor can operate
 */
 #include <VescUart.h>
 #include <stdlib.h>
@@ -39,6 +39,7 @@ void setup() {
 
 /* loop() runs until program terminates */
 void loop() {
+  delay(100);
   /* poll UART for VESC values */
   if (UART.getVescValues()) {
 
